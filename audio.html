@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <style>
+        body {
+            background-color: red;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        /* Navigation Bar */
+        nav {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            position: relative;
+        }
+        nav img {
+            width: 90px;
+            height: 80px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        /* Burger Menu Styling */
+        .burger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px;
+        }
+        .nav-links {
+            display: flex;
+        }
+        .nav-links ul {
+            display: flex;
+        }
+        .nav-links ul li {
+            margin-right: 20px;
+        }
+        /* For mobile screens */
+        @media screen and (max-width: 768px) {
+            .nav-links ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: black;
+                position: absolute;
+                top: 60px; /* Adjust based on your nav height */
+                left: 0;
+            }
+            .nav-links ul.active {
+                display: flex;
+            }
+            .burger {
+                display: flex;
+            }
+        }
+        /* Footer styling */
+        footer {
+            background-color: black;
+            padding: 10px;
+            text-align: center;
+        }
+        footer a img {
+            margin: 0 10px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="pervert.jpg" width="90" height="80" alt="logo">
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="tteksaan.html">Home</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="audio.html">Music</a></li>
+                <li><a href="book.html">Book</a></li>
+            </ul>
+        </div>
+        <div><a href="https://ku.edu.kz">Entry</a></div>
+    </nav>
+    <main class="container-audio">
+        <section class="audio1">
+            <img src="nolabe.jpg" width="320" height="200" alt="Audio 1">
+            <audio src="lil krystalll - Каждый день.mp3" controls type="audio/mp3"></audio>
+        </section>
+        <section class="audio2">
+            <img src="pc.jpg" width="320" height="200" alt="Audio 2">
+            <audio src="obladaet-for-mula-mp3.mp3" controls type="audio/mp3"></audio>
+        </section>
+        <section class="audio3">
+            <img src="mice.jpg" width="320" height="200" alt="Audio 3">
+            <audio src="9mice-riot-muzik-mp3.mp3" controls type="audio/mp3"></audio>
+        </section>
+    </main>
+    <footer>
+        <a href="https://www.youtube.com/@playersclub" target="_blank"><img src="youtube.png" width="50" height="40" alt="YouTube"></a>
+        <a href="https://soundcloud.com/kanato-sha" target="_blank"><img src="sc.png" width="40" height="40" alt="SoundCloud"></a>
+        <a href="https://www.instagram.com/?next=%" target="_blank"><img src="instagram.jpg" width="50" height="40" alt="Instagram"></a>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links ul');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

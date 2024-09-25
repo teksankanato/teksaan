@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanat's Profile</title>
+    <style>
+        body {
+            background-color: red;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        /* Navigation Bar */
+        nav {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        nav img {
+            width: 90px;
+            height: 80px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        /* Burger Menu Styling */
+        .burger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px;
+        }
+        .nav-links {
+            display: flex;
+        }
+        .nav-links ul {
+            display: flex;
+        }
+        .nav-links ul li {
+            margin-right: 20px;
+        }
+        /* For mobile screens */
+        @media screen and (max-width: 768px) {
+            .nav-links ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: black;
+            }
+            .nav-links ul.active {
+                display: flex;
+            }
+            .burger {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="pervert.jpg" alt="Profile Image">
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="tteksaan.html">Home</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="audio.html">Music</a></li>
+                <li><a href="book.html">Book</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div><a href="login.html">Entry</a></div>
+
+    <main>
+        <div>
+            <p>Name: Kanat</p>
+            <p>Surname: Shakhatov</p>
+            <p>Age: 19 years</p>
+            <p>Place of birth: Petropavlovsk, Kazakhstan</p>
+            <p>Profession: Professional KFC enjoyer (student)</p>
+        </div>
+        <img src="teksan.jpg" width="520" height="520" alt="Profile Image">
+        <div>
+            <p>Interests: Anime, Music</p>
+            <p>Hobbies: Rap, Basketball</p>
+            <p>Life views: Liberal</p>
+            <p>Credo: Cringe is okay, even though I hate it</p>
+        </div>
+    </main>
+
+    <section>
+        <h2>Essay</h2>
+        <p>My name is Kanat. I'm a student of the 2nd cohort at Kozybaev University, studying IS in management. I enjoy sports, especially basketball and going to the gym. I would like to try golf in the future. I'm open to new experiences. I also make music, particularly rap, and I'm very keen on basketball.</p>
+    </section>
+
+    <footer>
+        <a href="https://www.youtube.com/@playersclub" target="_blank"><img src="youtube.png" width="50" height="40" alt="YouTube Logo"></a>
+        <a href="https://soundcloud.com/kanato-sha" target="_blank"><img src="sc.png" width="40" height="40" alt="SoundCloud Logo"></a>
+        <a href="https://www.instagram.com/?next=%" target="_blank"><img src="instagram.jpg" width="50" height="40" alt="Instagram Logo"></a>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links ul');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

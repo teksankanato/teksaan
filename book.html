@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <style>
+        body {
+            background-color: red;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            position: relative;
+        }
+        nav img {
+            width: 90px;
+            height: 80px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        /* Burger Menu Styling */
+        .burger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px;
+        }
+        .nav-links {
+            display: flex;
+        }
+        .nav-links ul {
+            display: flex;
+        }
+        .nav-links ul li {
+            margin-right: 20px;
+        }
+        /* For mobile screens */
+        @media screen and (max-width: 768px) {
+            .nav-links ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: black;
+                position: absolute;
+                top: 60px; /* Adjust based on your nav height */
+                left: 0;
+            }
+            .nav-links ul.active {
+                display: flex;
+            }
+            .burger {
+                display: flex;
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <img src="logo.jpg" alt="Site Logo">
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="tteksaan.html">Home</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="audio.html">Music</a></li>
+                <li><a href="book.html">Book</a></li>
+            </ul>
+        </div>
+        <div><a href="https://ku.edu.kz">Entry</a></div>
+    </nav>
+    <main class="container-book">
+        <section class="book1">
+            <img src="jj.jpg" width="600" height="400">
+            <a href="jje.pdf">Download book</a>
+            <p>I highly recommend reading this book. This book gives a lot of emotion and keeps the reader interested throughout the storyline. Originally published in French in 1864, *Journey to the Center of the Earth* tells the story of Professor Lidenbrock, his nephew, and a hired guide who, following the instructions of a medieval alchemist, travel deep into an Icelandic volcano.</p>
+        </section>
+        <section class="book2">
+            <img src="ls.jpg" width="600" height="400">
+            <a href="lse.pdf">Download book</a>
+            <p>Verne's meticulous research and attention to scientific detail, considering the time the novel was written (1870), contribute to the authenticity of the story. Many of the technologies and marine life described in the book were, and still are, remarkably accurate for its time.</p>
+        </section>
+        <section class="book2">
+            <img src="bb.jpg" width="600" height="400">
+            <a href="bbc.pdf">Download book</a>
+            <p>This book helps readers understand how money works and teaches them how to manage it effectively.</p>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://www.youtube.com/@playersclub" target="_blank"><img src="youtube.png" width="50" height="40" alt="YouTube Logo"></a>
+        <a href="https://soundcloud.com/kanato-sha" target="_blank"><img src="sc.png" width="40" height="40" alt="SoundCloud Logo"></a>
+        <a href="https://www.instagram.com/?next=%" target="_blank"><img src="instagram.jpg" width="50" height="40" alt="Instagram Logo"></a>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links ul');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

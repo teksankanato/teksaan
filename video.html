@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <style>
+        body, nav, main, footer {
+            background-color: red;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            position: relative;
+        }
+
+        nav img {
+            width: 90px;
+            height: 80px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .burger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px;
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links ul {
+            display: flex;
+        }
+
+        .nav-links ul li {
+            margin-right: 20px;
+        }
+
+        /* For mobile screens */
+        @media screen and (max-width: 768px) {
+            .nav-links ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: black;
+                position: absolute;
+                top: 60px; /* Adjust based on your nav height */
+                left: 0;
+            }
+
+            .nav-links ul.active {
+                display: flex;
+            }
+
+            .burger {
+                display: flex;
+            }
+        }
+
+        /* Main section styling */
+        main {
+            padding: 20px;
+        }
+
+        main section {
+            margin-bottom: 20px;
+        }
+
+        .video1 video {
+            width: 400px;
+            height: 300px;
+        }
+
+        main video, main iframe {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer a img {
+            margin: 0 10px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="pervert.jpg" width="90" height="80" alt="logo">
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="tteksaan.html">Home</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="audio.html">Music</a></li>
+                <li><a href="book.html">Book</a></li>
+            </ul>
+        </div>
+        <div><a href="https://ku.edu.kz">Entry</a></div>
+    </nav>
+    <main class="container-video">
+        <section class="video1">
+            <video src="doggystyle.mp4" controls></video>
+            <p>I love animals, especially pets, so I decided to put them below. The dog is running and I'm 100% positive that it's happy.</p>
+        </section>
+        <section class="video2">
+            <iframe width="600" height="400" src="kitten.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Kittens <3</p>
+        </section>
+        <section class="video3">
+            <iframe width="600" height="400" src="ham.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>HAHAHAHA THIS LIL BRO RUNS SO FAST, THAT I FOUND IT HILARIOUS</p>
+        </section>
+    </main>
+    <footer>
+        <a href="https://www.youtube.com/@playersclub" target="_blank"><img src="youtube.png" width="50" height="40" alt="YouTube"></a>
+        <a href="https://soundcloud.com/kanato-sha" target="_blank"><img src="sc.png" width="40" height="40" alt="SoundCloud"></a>
+        <a href="https://www.instagram.com/?next=%" target="_blank"><img src="instagram.jpg" width="50" height="40" alt="Instagram"></a>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links ul');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
