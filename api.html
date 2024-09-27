@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <style>
+        body {
+            background-color: red;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+
+        nav {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            position: relative;
+        }
+
+            nav img {
+                width: 90px;
+                height: 80px;
+            }
+
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+
+                nav ul li {
+                    margin-right: 20px;
+                }
+
+                    nav ul li a {
+                        color: white;
+                        text-decoration: none;
+                    }
+
+        .burger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+            .burger div {
+                width: 25px;
+                height: 3px;
+                background-color: white;
+                margin: 5px;
+            }
+
+        .nav-links {
+            display: flex;
+        }
+
+            .nav-links ul {
+                display: flex;
+            }
+
+                .nav-links ul li {
+                    margin-right: 20px;
+                }
+
+        @media screen and (max-width: 768px) {
+            .nav-links ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: black;
+                position: absolute;
+                top: 60px;
+                left: 0;
+            }
+
+                .nav-links ul.active {
+                    display: flex;
+                }
+
+            .burger {
+                display: flex;
+            }
+        }
+    </style>
+    <style>
+        .navbar ul .work {
+            position: relative; /* Set the position to relative to enable absolute positioning of its child elements */
+            display: flex; /* Use flexbox for layout */
+            z-index: 10; /* Set stacking order */
+        }
+
+            .navbar ul .work ul {
+                position: absolute; /* Position the dropdown menu absolutely relative to its nearest positioned ancestor */
+                flex-direction: column; /* Arrange children in a column */
+                left: 0; /* Align the left edge of the dropdown with the parent */
+                top: 100%; /* Position the top of the dropdown just below the parent */
+                width: 100px; /* Set a fixed width for the dropdown */
+                display: none; /* Initially hide the dropdown */
+                padding: 0; /* Remove default padding */
+                z-index: 20; /* Set a higher stacking order for the dropdown */
+            }
+
+                .navbar ul .work ul li {
+                    z-index: 20; /* Ensure list items have the same stacking order as the parent */
+                    background-color: #7cc6e5; /* Set background color */
+                    margin-bottom: 2px; /* Add space between items */
+                }
+
+            .navbar ul .work:hover ul {
+                display: block; /* Show the dropdown when hovering over the parent */
+            }
+
+            .navbar ul .work ul li:hover {
+                background-color: white; /* Change background color on hover */
+                border-radius: 0; /* Remove border radius */
+            }
+            .navbar ul .work ul {
+                position: absolute; /* Position the dropdown menu absolutely relative to its nearest positioned ancestor */
+                flex-direction: column; /* Arrange children in a column */
+                left: 10px; /* Offset the dropdown 10px from the left of the parent */
+                top: 0; /* Align the top of the dropdown with the top of the parent */
+                width: 100px; /* Set a fixed width for the dropdown */
+                display: none; /* Initially hide the dropdown */
+                padding: 0; /* Remove default padding */
+                z-index: 20; /* Set a higher stacking order for the dropdown */
+            }
+
+                .navbar ul .work ul li {
+                    margin-top: 0; /* Remove top margin */
+                    margin-bottom: 10px; /* Add bottom margin */
+                    background-color: unset; /* Remove default background color */
+                    font-size: 1.2rem; /* Increase font size */
+                    margin-left: 10px; /* Offset the list item 10px from the left */
+                    color: black; /* Set text color to black */
+                }
+
+                    .navbar ul .work ul li:hover {
+                        background-color: black; /* Change background color to black on hover */
+                    }
+
+                        .navbar ul .work ul li:hover a:hover {
+                            color: white; /* Change text color to white when hovering over the link */
+                        }
+
+            .navbar ul .work:hover ul li a {
+                color: black; /* Set text color to black when hovering over the parent */
+            }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <img src="pervert.jpg" alt="Site Logo">
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="tteksaan.html">Home</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="audio.html">Music</a></li>
+                <li><a href="book.html">Book</a></li>
+                <li class="work">
+                    <a href="#">Work &bigtriangledown;</a>
+                    <ul>
+                        <li><a href="form.html">Form</a></li>
+                        <li><a href="math.html">Math</a></li>
+                        <li><a href="api.html">API</a></li>
+                    </ul>
+
+                </li>
+            </ul>
+        </div>
+        <div><a href="https://ku.edu.kz">Entry</a></div>
+    </nav>
+
+    <footer>
+        <a href="https://www.youtube.com/@playersclub" target="_blank"><img src="youtube.png" width="50" height="40" alt="YouTube Logo"></a>
+        <a href="https://soundcloud.com/kanato-sha" target="_blank"><img src="sc.png" width="40" height="40" alt="SoundCloud Logo"></a>
+        <a href="https://www.instagram.com/?next=%" target="_blank"><img src="instagram.jpg" width="50" height="40" alt="Instagram Logo"></a>
+    </footer>

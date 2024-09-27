@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <style>
+        body {
+            background-color: red;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+
+        nav {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            position: relative;
+        }
+
+            nav img {
+                width: 90px;
+                height: 80px;
+            }
+
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+
+                nav ul li {
+                    margin-right: 20px;
+                }
+
+                    nav ul li a {
+                        color: white;
+                        text-decoration: none;
+                    }
+
+        .burger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+            .burger div {
+                width: 25px;
+                height: 3px;
+                background-color: white;
+                margin: 5px;
+            }
+
+        .nav-links {
+            display: flex;
+        }
+
+            .nav-links ul {
+                display: flex;
+            }
+
+                .nav-links ul li {
+                    margin-right: 20px;
+                }
+
+        @media screen and (max-width: 768px) {
+            .nav-links ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: black;
+                position: absolute;
+                top: 60px;
+                left: 0;
+            }
+
+                .nav-links ul.active {
+                    display: flex;
+                }
+
+            .burger {
+                display: flex;
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <img src="pervert.jpg" alt="Site Logo">
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="tteksaan.html">Home</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="audio.html">Music</a></li>
+                <li><a href="book.html">Book</a></li>
+                <li class="work">
+                    <a href="#">Work &bigtriangledown;</a>
+                    <ul>
+                        <li><a href="form.html">Form</a></li>
+                        <li><a href="math.html">Math</a></li>
+                        <li><a href="api.html">API</a></li>
+                    </ul>
+
+                </li>
+            </ul>
+        </div>
+        <div><a href="https://ku.edu.kz">Entry</a></div>
+    </nav>
+    
+    <footer>
+        <a href="https://www.youtube.com/@playersclub" target="_blank"><img src="youtube.png" width="50" height="40" alt="YouTube Logo"></a>
+        <a href="https://soundcloud.com/kanato-sha" target="_blank"><img src="sc.png" width="40" height="40" alt="SoundCloud Logo"></a>
+        <a href="https://www.instagram.com/?next=%" target="_blank"><img src="instagram.jpg" width="50" height="40" alt="Instagram Logo"></a>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links ul');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
